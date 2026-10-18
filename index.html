@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Góc Tin học Tiểu học</title>
+<style>
+:root{--navy:#173b65;--blue:#2878d0;--sky:#eaf5ff;--mint:#dff8ee;--yellow:#fff1bd;--coral:#ff806b;--ink:#203047;--muted:#65758b;--white:#fff;--shadow:0 12px 30px rgba(27,65,105,.10)}
+*{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;font-family:Arial,"Segoe UI",sans-serif;color:var(--ink);background:#f7fbff;line-height:1.55}
+a{color:inherit;text-decoration:none}.wrap{max-width:1160px;margin:auto;padding:0 22px}
+header{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.95);backdrop-filter:blur(12px);border-bottom:1px solid #e4edf6}
+.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:18px}.brand{display:flex;align-items:center;gap:12px;font-weight:800;color:var(--navy);font-size:18px}.logo{width:45px;height:45px;border-radius:15px;background:linear-gradient(135deg,#2878d0,#51c9b0);display:grid;place-items:center;color:#fff;font-size:24px;box-shadow:var(--shadow)}
+nav{display:flex;gap:8px;flex-wrap:wrap}nav a{padding:9px 12px;border-radius:12px;color:#4b5d73;font-weight:700;font-size:14px}nav a:hover{background:var(--sky);color:var(--blue)}
+.hero{padding:58px 0 45px;background:radial-gradient(circle at 90% 15%,#d9f6ec 0,transparent 26%),radial-gradient(circle at 5% 90%,#dcecff 0,transparent 30%),linear-gradient(135deg,#f8fcff,#eef7ff)}
+.hero-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:35px;align-items:center}.eyebrow{display:inline-block;background:#dff8ee;color:#147a61;padding:7px 12px;border-radius:999px;font-weight:800;font-size:13px;letter-spacing:.2px}
+h1{font-size:clamp(36px,5vw,58px);line-height:1.08;letter-spacing:-1.6px;color:var(--navy);margin:18px 0}h1 span{color:var(--blue)}.hero p{font-size:18px;color:#5c6e83;max-width:610px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:25px}
+.btn{display:inline-flex;align-items:center;justify-content:center;border:0;border-radius:13px;padding:12px 18px;font-weight:800;cursor:pointer;font-size:15px;transition:.2s}.btn:hover{transform:translateY(-2px)}.primary{background:var(--blue);color:#fff;box-shadow:0 8px 18px #2878d033}.secondary{background:#fff;color:var(--navy);border:1px solid #dbe8f5}
+.hero-art{min-height:290px;position:relative;display:grid;place-items:center}.orb{width:240px;height:240px;border-radius:42% 58% 61% 39%/43% 40% 60% 57%;background:linear-gradient(145deg,#bce9ff,#c9f5df);display:grid;place-items:center;font-size:105px;transform:rotate(-7deg);box-shadow:var(--shadow)}
+.float{position:absolute;background:#fff;padding:13px 16px;border-radius:16px;box-shadow:var(--shadow);font-weight:800}.float.one{top:24px;left:0}.float.two{right:0;bottom:25px}.float.three{right:8px;top:28px;font-size:13px}
+section{padding:52px 0}.section-head{display:flex;justify-content:space-between;gap:20px;align-items:end;margin-bottom:24px}.kicker{font-size:12px;text-transform:uppercase;letter-spacing:1.6px;color:var(--blue);font-weight:900}.section-head h2{font-size:clamp(27px,3vw,36px);color:var(--navy);margin:5px 0}.section-head p{margin:0;color:var(--muted);max-width:560px}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:15px;margin-top:-10px}.stat{padding:19px 20px;background:#fff;border:1px solid #e5eef7;border-radius:18px;box-shadow:var(--shadow)}.stat strong{display:block;color:var(--navy);font-size:25px}.stat span{color:var(--muted);font-size:14px}
+.class-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.class-card{background:#fff;border:1px solid #e4edf6;border-radius:22px;overflow:hidden;box-shadow:var(--shadow);transition:.2s}.class-card:hover{transform:translateY(-4px)}.card-top{padding:23px 23px 18px;min-height:135px}.class3 .card-top{background:#e3f2ff}.class4 .card-top{background:#ddf8ed}.class5 .card-top{background:#fff1c8}.class-no{font-size:13px;font-weight:900;color:#50647b}.class-card h3{font-size:24px;color:var(--navy);margin:6px 0}.class-card .body{padding:19px 23px 23px}.class-card p{color:var(--muted);margin:0 0 15px}.tag{display:inline-block;font-size:12px;font-weight:800;background:#f0f5fa;border-radius:8px;padding:5px 8px;margin:2px 4px 2px 0;color:#51677e}
+.toolbar{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:20px}.search{flex:1;min-width:220px;padding:13px 15px;border:1px solid #d8e5f2;border-radius:13px;background:#fff;font-size:15px}.filter{padding:12px;border:1px solid #d8e5f2;border-radius:13px;background:#fff;font-size:15px;color:var(--ink)}
+.lesson-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.lesson{background:#fff;border:1px solid #e3edf7;border-radius:18px;padding:20px;box-shadow:0 6px 20px #1c4b7510}.lesson .emoji{font-size:27px}.lesson h3{margin:8px 0;color:var(--navy);font-size:19px}.lesson p{color:var(--muted);font-size:14px}.lesson-foot{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:16px}.small-btn{background:var(--sky);color:#1e67b3;border:0;border-radius:10px;padding:9px 12px;font-weight:800;cursor:pointer}.small-btn:hover{background:#d9edff}.lesson-details{margin-top:14px;padding:14px;background:#f6fbff;border-radius:12px;font-size:14px;display:none}.lesson-details.open{display:block}.lesson-details ul{padding-left:20px;margin:8px 0}
+.game-section{background:linear-gradient(135deg,#173b65,#215b91);color:white}.game-section .kicker{color:#9fe7d3}.game-section h2{color:#fff}.game-section .section-head p{color:#d3e5f7}.game-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:22px;align-items:start}.game-intro{background:#ffffff12;border:1px solid #ffffff25;border-radius:22px;padding:24px}.game-intro .big{font-size:52px}.game-intro p{color:#d9e8f7}.quiz{background:#fff;color:var(--ink);border-radius:22px;padding:26px;box-shadow:0 16px 35px #0b274044}.quiz-top{display:flex;justify-content:space-between;gap:10px;color:var(--muted);font-size:13px;font-weight:800}.progress{height:7px;background:#e7eff7;border-radius:20px;margin:14px 0 22px;overflow:hidden}.progress div{height:100%;background:#4fc4a3;width:0;transition:.25s}.quiz h3{font-size:22px;color:var(--navy);margin:0 0 18px}.answers{display:grid;gap:10px}.answer{padding:13px 15px;border:1px solid #dce7f2;border-radius:12px;background:#fff;text-align:left;font-size:15px;cursor:pointer;color:var(--ink)}.answer:hover:not(:disabled){border-color:#70b5f4;background:#f4faff}.answer.correct{background:#e2f8ed;border-color:#55c99a}.answer.wrong{background:#fff0ed;border-color:#ff9a87}.feedback{min-height:28px;margin-top:13px;font-weight:800}.quiz-actions{display:flex;justify-content:space-between;gap:10px;margin-top:10px}.teacher-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:17px}.teacher-card{background:#fff;border:1px solid #e2edf7;border-radius:18px;padding:22px}.teacher-card .icon{font-size:28px}.teacher-card h3{margin:8px 0;color:var(--navy)}.teacher-card p{color:var(--muted);font-size:14px}.teacher-card a{color:var(--blue);font-weight:800}
+.notice{background:#fff7db;border:1px solid #f5dfa0;padding:17px 19px;border-radius:15px;color:#73581c;font-size:14px;margin-top:20px}
+footer{background:#102d4e;color:#d8e8f7;padding:30px 0}.footer-row{display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}.footer-row strong{color:#fff}.footer-row p{margin:4px 0;color:#bbd0e5;font-size:13px}
+.modal{position:fixed;inset:0;background:#102d4eb8;display:none;align-items:center;justify-content:center;padding:20px;z-index:30}.modal.show{display:flex}.modal-box{max-width:560px;width:100%;background:#fff;border-radius:22px;padding:26px;max-height:85vh;overflow:auto}.modal-box h2{color:var(--navy);margin-top:0}.close{float:right;border:0;background:#edf4fa;border-radius:10px;padding:8px 11px;cursor:pointer}
+@media(max-width:850px){.hero-grid,.game-layout{grid-template-columns:1fr}.hero-art{min-height:240px}.orb{width:190px;height:190px;font-size:80px}.class-grid,.lesson-grid,.teacher-grid{grid-template-columns:repeat(2,1fr)}nav{display:none}.stats{margin-top:15px}}
+@media(max-width:560px){.class-grid,.lesson-grid,.teacher-grid,.stats{grid-template-columns:1fr}.hero{padding-top:35px}.section-head{display:block}.section-head p{margin-top:8px}.hero-art{min-height:220px}.float.one{left:0}.float.two{right:0}.nav{min-height:66px}.brand{font-size:15px}}
+</style>
+</head>
+<body>
+<header><div class="wrap nav">
+  <a class="brand" href="#home"><span class="logo">💻</span><span>GÓC TIN HỌC<br><small style="font-weight:600;color:#6b7d90">TIỂU HỌC</small></span></a>
+  <nav><a href="#home">Trang chủ</a><a href="#classes">Khối lớp</a><a href="#lessons">Bài học</a><a href="#games">Trò chơi</a><a href="#teachers">Góc giáo viên</a></nav>
+</div></header>
+<main>
+<section class="hero" id="home"><div class="wrap hero-grid">
+  <div><span class="eyebrow">✨ HỌC VUI · KHÁM PHÁ · SÁNG TẠO</span>
+  <h1>Mỗi ngày một chút,<br><span>giỏi Tin học hơn!</span></h1>
+  <p>Không gian học tập thân thiện dành cho học sinh lớp 3, 4, 5 và kho học liệu tiện ích cho giáo viên. Cùng khám phá máy tính, Internet và thế giới lập trình nhé!</p>
+  <div class="actions"><a class="btn primary" href="#lessons">Khám phá bài học&nbsp; →</a><a class="btn secondary" href="#games">🎮 Chơi thử ngay</a></div>
+  </div>
+  <div class="hero-art"><div class="orb">🧑‍💻</div><div class="float one">🌟 Học qua thực hành</div><div class="float two">🎯 Thử thách kiến thức</div><div class="float three">🚀 Sáng tạo mỗi ngày</div></div>
+</div></section>
+<div class="wrap"><div class="stats">
+  <div class="stat"><strong>03 khối lớp</strong><span>Nội dung cho lớp 3, 4 và 5</span></div>
+  <div class="stat"><strong>Học mà chơi</strong><span>Câu hỏi tương tác, phản hồi tức thì</span></div>
+  <div class="stat"><strong>Miễn phí bắt đầu</strong><span>Mở bằng trình duyệt trên máy tính</span></div>
+</div></div>
+<section id="classes"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">LỘ TRÌNH HỌC TẬP</div><h2>Chọn khối lớp của em</h2></div><p>Chọn khối lớp để lọc các bài học phù hợp. Nội dung mẫu có thể được giáo viên cập nhật theo sách và phân phối chương trình của trường.</p></div>
+  <div class="class-grid">
+    <article class="class-card class3"><div class="card-top"><div class="class-no">KHÁM PHÁ CƠ BẢN</div><h3>💡 Tin học lớp 3</h3></div><div class="body"><p>Làm quen với máy tính, sử dụng bàn phím và chuột, tổ chức thông tin đơn giản.</p><span class="tag">Máy tính</span><span class="tag">Thao tác cơ bản</span><div style="margin-top:15px"><button class="small-btn" onclick="filterClass('3')">Xem bài lớp 3 →</button></div></div></article>
+    <article class="class-card class4"><div class="card-top"><div class="class-no">TÌM HIỂU VÀ THỰC HÀNH</div><h3>🌐 Tin học lớp 4</h3></div><div class="body"><p>Khám phá Internet, tìm kiếm thông tin, tạo và quản lý nội dung số an toàn.</p><span class="tag">Internet</span><span class="tag">Thông tin số</span><div style="margin-top:15px"><button class="small-btn" onclick="filterClass('4')">Xem bài lớp 4 →</button></div></div></article>
+    <article class="class-card class5"><div class="card-top"><div class="class-no">SÁNG TẠO VÀ GIẢI QUYẾT VẤN ĐỀ</div><h3>🚀 Tin học lớp 5</h3></div><div class="body"><p>Thực hành tạo sản phẩm số, bản quyền nội dung và bước đầu lập trình.</p><span class="tag">Sáng tạo</span><span class="tag">Lập trình</span><div style="margin-top:15px"><button class="small-btn" onclick="filterClass('5')">Xem bài lớp 5 →</button></div></div></article>
+  </div>
+</div></section>
+<section id="lessons" style="background:#eef6fd"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">KHO HỌC LIỆU</div><h2>Bài học nổi bật</h2></div><p>Các bài dưới đây là nội dung mẫu để thầy/cô thử website. Có thể mở mục “Xem nội dung” để xem mục tiêu và gợi ý hoạt động.</p></div>
+  <div class="toolbar"><input class="search" id="searchInput" placeholder="🔎 Tìm bài học, ví dụ: Internet..." oninput="renderLessons()"><select class="filter" id="classFilter" onchange="renderLessons()"><option value="all">Tất cả khối lớp</option><option value="3">Tin học lớp 3</option><option value="4">Tin học lớp 4</option><option value="5">Tin học lớp 5</option></select></div>
+  <div class="lesson-grid" id="lessonGrid"></div>
+</div></section>
+<section class="game-section" id="games"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">GÓC THỬ THÁCH</div><h2>Kiểm tra kiến thức qua trò chơi</h2></div><p>Chọn đáp án phù hợp. Sau mỗi câu hỏi, em sẽ nhận được phản hồi và điểm số.</p></div>
+  <div class="game-layout"><div class="game-intro"><div class="big">🧩</div><h3>Thử thách Tin học</h3><p>Trả lời 5 câu hỏi ngắn về sử dụng máy tính, Internet và an toàn số.</p><p>⭐ Mỗi câu đúng được 1 điểm.<br>💡 Đọc kỹ câu hỏi trước khi chọn.</p><button class="btn secondary" onclick="restartQuiz()">↻ Chơi lại từ đầu</button></div>
+  <div class="quiz"><div class="quiz-top"><span id="questionCount">CÂU 1 / 5</span><span id="scoreLabel">Điểm: 0</span></div><div class="progress"><div id="progressBar"></div></div><h3 id="questionText"></h3><div class="answers" id="answers"></div><div class="feedback" id="feedback" aria-live="polite"></div><div class="quiz-actions"><span id="quizHint" style="font-size:13px;color:#6b7d90;align-self:center">Chọn một đáp án</span><button class="btn primary" id="nextBtn" onclick="nextQuestion()" disabled>Câu tiếp theo →</button></div></div></div>
+</div></section>
+<section id="teachers"><div class="wrap">
+  <div class="section-head"><div><div class="kicker">DÀNH CHO THẦY CÔ</div><h2>Góc giáo viên</h2></div><p>Một số gợi ý để biến website thành kho học liệu riêng của tổ chuyên môn.</p></div>
+  <div class="teacher-grid">
+    <article class="teacher-card"><div class="icon">📘</div><h3>Giáo án và kế hoạch bài dạy</h3><p>Sắp xếp tài liệu theo khối lớp, tuần, bài học và tiết dạy. Nên dùng tên tệp thống nhất để dễ tìm.</p><a href="#teacherGuide">Xem cách bổ sung →</a></article>
+    <article class="teacher-card"><div class="icon">🧰</div><h3>Học liệu thực hành</h3><p>Bổ sung ảnh minh họa, video, tệp thực hành, bài trình chiếu hoặc liên kết công cụ học tập.</p><a href="#teacherGuide">Xem cách bổ sung →</a></article>
+    <article class="teacher-card"><div class="icon">🛡️</div><h3>An toàn khi học trực tuyến</h3><p>Nhắc học sinh không chia sẻ mật khẩu, địa chỉ nhà, số điện thoại hoặc thông tin riêng tư trên mạng.</p><a href="#teacherGuide">Xem gợi ý →</a></article>
+  </div>
+  <div class="notice" id="teacherGuide"><strong>📌 Lưu ý khi sử dụng:</strong> Đây là website mẫu, chưa phải kho giáo án chính thức. Thầy/cô hãy kiểm tra và điều chỉnh nội dung theo SGK, kế hoạch giáo dục và yêu cầu của nhà trường trước khi giao cho học sinh. Không tải lên dữ liệu cá nhân của học sinh.</div>
+</div></section>
+</main>
+<footer><div class="wrap footer-row"><div><strong>💻 Góc Tin học Tiểu học</strong><p>Học tập tích cực · Sáng tạo có trách nhiệm</p></div><div><p>Website mẫu dành cho giáo viên và học sinh lớp 3–5.</p><p>© <span id="year"></span> · Có thể tùy chỉnh theo nhu cầu của trường.</p></div></div></footer>
+<div class="modal" id="lessonModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle"><div class="modal-box"><button class="close" onclick="closeModal()">Đóng ✕</button><div id="modalContent"></div></div></div>
+<script>
+const lessons=[
+ {id:1,grade:"3",emoji:"🖱️",title:"Làm quen với máy tính",desc:"Nhận biết một số bộ phận và cách sử dụng máy tính đúng cách.",tags:["Thiết bị","Thao tác cơ bản"],goal:"Học sinh gọi tên được một số bộ phận cơ bản và nêu được cách sử dụng an toàn.",activities:["Quan sát hình ảnh máy tính và gọi tên màn hình, thân máy, bàn phím, chuột.","Thực hành tư thế ngồi phù hợp và thao tác chuột đơn giản.","Chia sẻ một quy tắc giữ gìn thiết bị."]},
+ {id:2,grade:"3",emoji:"⌨️",title:"Sử dụng bàn phím",desc:"Tìm hiểu các nhóm phím và luyện gõ văn bản ngắn.",tags:["Bàn phím","Thực hành"],goal:"Nhận biết một số nhóm phím và thực hiện thao tác gõ đơn giản.",activities:["Tìm các phím chữ, phím số, phím cách và phím Enter.","Gõ tên mình hoặc một câu ngắn theo hướng dẫn.","Giữ tư thế ngồi và đặt tay thoải mái."]},
+ {id:3,grade:"3",emoji:"📁",title:"Sắp xếp tệp và thư mục",desc:"Hiểu cách lưu trữ thông tin theo thư mục dễ tìm.",tags:["Tệp","Thư mục"],goal:"Nêu được ích lợi của việc đặt tên và sắp xếp tệp hợp lý.",activities:["Quan sát ví dụ một thư mục chứa các tệp.","Đề xuất tên thư mục cho bài tập của lớp.","Thảo luận cách tìm lại tệp đã lưu."]},
+ {id:4,grade:"4",emoji:"🌐",title:"Tìm kiếm thông tin trên Internet",desc:"Xác định từ khóa và thực hành tìm thông tin phù hợp.",tags:["Internet","Từ khóa"],goal:"Biết sử dụng từ khóa đơn giản và nhận ra cần kiểm tra độ tin cậy của kết quả.",activities:["Nêu câu hỏi cần tìm hiểu.","Chọn từ khóa ngắn gọn, đúng trọng tâm.","So sánh nguồn thông tin và trao đổi với giáo viên khi chưa chắc chắn."]},
+ {id:5,grade:"4",emoji:"🔐",title:"An toàn khi sử dụng Internet",desc:"Nhận biết thông tin riêng tư và cách ứng xử an toàn.",tags:["An toàn số","Quyền riêng tư"],goal:"Nêu được một số nguyên tắc bảo vệ bản thân khi trực tuyến.",activities:["Phân loại thông tin nên và không nên chia sẻ.","Thực hành tình huống khi người lạ hỏi mật khẩu.","Biết báo với người lớn khi gặp nội dung đáng ngờ."]},
+ {id:6,grade:"4",emoji:"📝",title:"Tạo nội dung số đơn giản",desc:"Thực hành soạn thảo và trình bày thông tin rõ ràng.",tags:["Soạn thảo","Sản phẩm số"],goal:"Tạo được nội dung ngắn có tiêu đề và trình bày dễ đọc.",activities:["Mở phần mềm soạn thảo được nhà trường hướng dẫn.","Nhập tiêu đề và vài dòng nội dung.","Lưu tệp với tên dễ nhớ theo hướng dẫn."]},
+ {id:7,grade:"5",emoji:"©️",title:"Bản quyền nội dung thông tin",desc:"Tìm hiểu cách sử dụng hình ảnh và thông tin có trách nhiệm.",tags:["Bản quyền","Đạo đức số"],goal:"Hiểu rằng nội dung của người khác cần được tôn trọng và ghi nguồn phù hợp.",activities:["Phân tích tình huống sử dụng hình ảnh tìm thấy trên mạng.","Tìm hiểu ý nghĩa của việc ghi nguồn.","Tạo sản phẩm nhỏ với tài nguyên được phép sử dụng."]},
+ {id:8,grade:"5",emoji:"🧩",title:"Làm quen với thuật toán",desc:"Mô tả các bước để giải quyết một nhiệm vụ quen thuộc.",tags:["Thuật toán","Tư duy logic"],goal:"Sắp xếp các bước theo trình tự hợp lý và phát hiện bước còn thiếu.",activities:["Mô tả các bước chuẩn bị cặp sách.","Sắp xếp thẻ bước theo thứ tự.","Thử thay đổi thứ tự và giải thích kết quả."]},
+ {id:9,grade:"5",emoji:"🐱",title:"Khám phá lập trình Scratch",desc:"Làm quen với khối lệnh và tạo hoạt cảnh đơn giản.",tags:["Scratch","Lập trình"],goal:"Nhận biết khối lệnh và ghép một chuỗi lệnh đơn giản theo hướng dẫn.",activities:["Quan sát giao diện Scratch.","Ghép lệnh bắt đầu và di chuyển.","Chạy thử, quan sát kết quả và điều chỉnh."]}
+];
+function gradeName(g){return "Tin học lớp "+g}
+function renderLessons(){
+ const q=document.getElementById('searchInput').value.toLocaleLowerCase('vi').trim();
+ const g=document.getElementById('classFilter').value;
+ const list=lessons.filter(x=>(g==='all'||x.grade===g)&&[x.title,x.desc,...x.tags].join(' ').toLocaleLowerCase('vi').includes(q));
+ const root=document.getElementById('lessonGrid');
+ if(!list.length){root.innerHTML='<p>Chưa tìm thấy bài học phù hợp. Thầy/cô thử từ khóa khác nhé.</p>';return}
+ root.innerHTML=list.map(x=>`<article class="lesson"><div class="emoji">${x.emoji}</div><span class="tag">${gradeName(x.grade)}</span><h3>${x.title}</h3><p>${x.desc}</p><div class="lesson-foot"><span style="font-size:12px;color:#718197">${x.tags.join(' · ')}</span><button class="small-btn" onclick="showLesson(${x.id})">Xem nội dung</button></div><div class="lesson-details" id="details-${x.id}"><strong>Mục tiêu gợi ý</strong><p>${x.goal}</p><strong>Hoạt động</strong><ul>${x.activities.map(a=>`<li>${a}</li>`).join('')}</ul><button class="small-btn" onclick="showLesson(${x.id})">Mở bản xem chi tiết</button></div></article>`).join('');
+}
+function filterClass(g){document.getElementById('classFilter').value=g;renderLessons();document.getElementById('lessons').scrollIntoView({behavior:'smooth'})}
+function showLesson(id){const x=lessons.find(a=>a.id===id);document.getElementById('modalContent').innerHTML=`<span class="tag">${gradeName(x.grade)}</span><h2 id="modalTitle">${x.emoji} ${x.title}</h2><p>${x.desc}</p><h3>Mục tiêu gợi ý</h3><p>${x.goal}</p><h3>Gợi ý hoạt động dạy học</h3><ol>${x.activities.map(a=>`<li>${a}</li>`).join('')}</ol><p style="color:#6b7d90;font-size:13px">Nội dung mẫu — cần điều chỉnh theo bài học và kế hoạch dạy học thực tế.</p>`;document.getElementById('lessonModal').classList.add('show')}
+function closeModal(){document.getElementById('lessonModal').classList.remove('show')}
+document.getElementById('lessonModal').addEventListener('click',e=>{if(e.target.id==='lessonModal')closeModal()});
+const questions=[
+ {q:"Thiết bị nào thường dùng để điều khiển con trỏ trên màn hình?",a:["Máy in","Chuột máy tính","Loa","Màn hình"],correct:1,why:"Chuột giúp điều khiển con trỏ và chọn các đối tượng trên màn hình."},
+ {q:"Khi tìm kiếm thông tin trên Internet, từ khóa nên như thế nào?",a:["Thật dài dù không liên quan","Chỉ gồm ký hiệu ngẫu nhiên","Ngắn gọn và đúng nội dung cần tìm","Luôn nhập mật khẩu"],correct:2,why:"Từ khóa rõ ràng, liên quan giúp tìm kết quả phù hợp hơn."},
+ {q:"Người lạ trên mạng hỏi mật khẩu của em. Em nên làm gì?",a:["Gửi ngay cho họ","Đăng mật khẩu lên trang cá nhân","Không chia sẻ và báo người lớn đáng tin cậy","Dùng mật khẩu của bạn"],correct:2,why:"Mật khẩu là thông tin riêng tư. Không chia sẻ và hãy nhờ người lớn hỗ trợ."},
+ {q:"Khi sử dụng hình ảnh của người khác trong bài trình bày, em nên làm gì?",a:["Nhận là hình của mình","Tôn trọng điều kiện sử dụng và ghi nguồn phù hợp","Xóa tên tác giả","Chia sẻ bất kể nguồn"],correct:1,why:"Tôn trọng bản quyền và ghi nguồn là cách sử dụng nội dung có trách nhiệm."},
+ {q:"Thuật toán là gì?",a:["Một chuỗi bước để giải quyết nhiệm vụ","Một loại màn hình","Tên của bàn phím","Một trang web bất kỳ"],correct:0,why:"Thuật toán mô tả các bước theo trình tự để giải quyết một vấn đề."}
+];
+let qi=0,score=0,answered=false;
+function drawQuestion(){
+ const q=questions[qi];answered=false;
+ document.getElementById('questionCount').textContent=`CÂU ${qi+1} / ${questions.length}`;
+ document.getElementById('scoreLabel').textContent=`Điểm: ${score}`;
+ document.getElementById('progressBar').style.width=(qi/questions.length*100)+'%';
+ document.getElementById('questionText').textContent=q.q;
+ document.getElementById('answers').innerHTML=q.a.map((a,i)=>`<button class="answer" onclick="chooseAnswer(${i})">${String.fromCharCode(65+i)}. ${a}</button>`).join('');
+ document.getElementById('feedback').textContent='';
+ document.getElementById('quizHint').textContent='Chọn một đáp án';
+ document.getElementById('nextBtn').disabled=true;
+ document.getElementById('nextBtn').textContent=qi===questions.length-1?'Xem kết quả →':'Câu tiếp theo →';
+}
+function chooseAnswer(i){
+ if(answered)return;answered=true;const q=questions[qi];const buttons=[...document.querySelectorAll('.answer')];
+ buttons.forEach((b,j)=>{b.disabled=true;if(j===q.correct)b.classList.add('correct');if(j===i&&i!==q.correct)b.classList.add('wrong')});
+ if(i===q.correct){score++;document.getElementById('feedback').textContent='✅ Chính xác! '+q.why}else document.getElementById('feedback').textContent='💡 Chưa đúng. '+q.why;
+ document.getElementById('scoreLabel').textContent=`Điểm: ${score}`;
+ document.getElementById('progressBar').style.width=((qi+1)/questions.length*100)+'%';
+ document.getElementById('quizHint').textContent='Đã trả lời câu hỏi';
+ document.getElementById('nextBtn').disabled=false;
+}
+function nextQuestion(){if(!answered)return;if(qi<questions.length-1){qi++;drawQuestion()}else{document.getElementById('questionCount').textContent='HOÀN THÀNH';document.getElementById('progressBar').style.width='100%';document.getElementById('questionText').textContent=`Em đạt ${score}/${questions.length} điểm!`;document.getElementById('answers').innerHTML=`<div style="background:#eaf7f0;padding:18px;border-radius:13px"><strong>${score>=4?'🌟 Làm tốt lắm!':score>=3?'👏 Cố gắng tốt!':'💪 Hãy ôn tập và thử lại nhé!'}</strong><p>Đọc lại phần giải thích sau mỗi câu để ghi nhớ kiến thức.</p></div>`;document.getElementById('feedback').textContent='';document.getElementById('quizHint').textContent='Kết quả chỉ hiển thị trên thiết bị này.';document.getElementById('nextBtn').textContent='Chơi lại ↻';document.getElementById('nextBtn').disabled=false;document.getElementById('nextBtn').onclick=restartQuiz}}
+function restartQuiz(){qi=0;score=0;document.getElementById('nextBtn').onclick=nextQuestion;drawQuestion()}
+document.getElementById('year').textContent=new Date().getFullYear();
+renderLessons();drawQuestion();
+</script>
+</body></html>
